@@ -1,6 +1,6 @@
 import './WeatherApp.css'
 import { useState } from 'react'
-
+import nube from './assets/nube.png'
 export const WeatherApp = () => {
 
     const [city, setCity] = useState('') // estado para almacenar la ciudad
@@ -34,7 +34,7 @@ export const WeatherApp = () => {
 
     return (
         <div className="container">
-            <h1>SKAY<img src="../src/assets/nube.png" alt="Solecito"></img>BLUE</h1>
+            <h1>SKAY<img src={nube} alt="Solecito"></img>BLUE</h1>
             <p>Consulta el clima en tu ciudad</p>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Ciudad" value={city} onChange={handleCityChange}/>
